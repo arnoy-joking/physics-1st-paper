@@ -1,443 +1,1835 @@
+<!DOCTYPE html>
 <html lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1" name="viewport"/>
-  <title>
-   Biology 1st Paper - HSC 2026
-  </title>
-  <script src="https://cdn.tailwindcss.com">
-  </script>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-  <style>
-   /* Custom scrollbar for the class list */
-    .scrollbar-thin::-webkit-scrollbar {
-      width: 6px;
-    }
-    .scrollbar-thin::-webkit-scrollbar-track {
-      background: #1e293b;
-      border-radius: 0.375rem;
-    }
-    .scrollbar-thin::-webkit-scrollbar-thumb {
-      background-color: #475569;
-      border-radius: 0.375rem;
-    }
-    /* For aspect ratio container */
-    .aspect-w-16 {
-      position: relative;
-      width: 100%;
-      padding-bottom: 56.25%;
-    }
-    .aspect-w-16 iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border-radius: 0.375rem;
-    }
-    /* Scrollable class list height */
-    #classList {
-      max-height: 400px;
-      overflow-y: auto;
-    }
-    /* Selected class list item style */
-    .watchli.selected {
-      background-color: #000000;
-      color: #ffffff;
-    }
-  </style>
- </head>
- <body class="bg-slate-900 min-h-screen flex flex-col">
-  <!-- Header -->
-  <header class="bg-black flex items-center gap-2 px-4 py-3">
-   <img alt="Bondi Pathshala logo" class="h-8 w-auto" height="32" src="https://www.bondipathshala.com.bd/files/logo.png" width="auto"/>
-   <h1 class="text-white font-bold text-lg ml-2">
-    Biology 1st Paper - HSC 2026
-   </h1>
-  </header>
-  <!-- Main content -->
-  <main class="flex-1 p-4 flex flex-col md:flex-row md:gap-4">
-   <!-- Left content: video and pdf -->
-   <section aria-label="Live Class Section" class="bg-slate-800 rounded-lg p-4 flex flex-col w-full md:flex-1 md:order-1">
-    <h2 class="text-white font-semibold mb-4">
-     Live Class
-    </h2>
-    <div class="aspect-w-16 mb-4">
-     <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" id="videoPlayer" src="https://www.youtube.com/embed/rP8LE1_gP34?rel=0&modestbranding=1&showinfo=0&controls=1" title="YouTube video player">
-     </iframe>
-    </div>
-    <a class="bg-black text-white rounded-md px-4 py-2 w-max flex items-center gap-2 hover:bg-gray-800 transition" href="https://www.bondipathshala.com.bd/pdf/20240819-1724009668-olLQlzVm.pdf" id="pdfDownload" target="_blank" rel="noopener noreferrer">
-     <i class="far fa-file-pdf">
-     </i>
-     Download PDF
-    </a>
-   </section>
-   <!-- Right content: class list -->
-   <aside aria-label="Class List Section" class="bg-slate-800 rounded-lg p-4 flex flex-col w-full mt-4 md:w-72 md:mt-0 md:order-2">
-    <button class="bg-black text-white rounded-md px-4 py-2 mb-4 flex items-center justify-center gap-2" type="button">
-     <i class="fas fa-plus">
-     </i>
-     Add New Class
-    </button>
-    <h3 class="text-white font-semibold mb-2">
-     Class List
-    </h3>
-    <ul class="scrollbar-thin space-y-1" id="classList" role="list" tabindex="0">
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="vylbU3GFmK4" data-npdf="20240525-1716657674-IVrmjDy0.pdf" tabindex="0">
-          Course Roadmap
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="0zDP1tRa_Rg" data-npdf="20240527-1716831877-G1BCFR3A.pdf" tabindex="0">
-          Basic Calculus Part-01
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="MEOX9DUGnHM" data-npdf="20240530-1717014224-ZcQItppI.pdf" tabindex="0">
-          Basic Calculus Part-02
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="0A_uR7cgz6o" data-npdf="20240602-1717273188-yPWNIZKo.pdf" tabindex="0">
-          ভেক্টর পর্ব-০১
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="IvHcZd-N-R8" data-npdf="20240604-1717444477-q4WOdXXM.pdf" tabindex="0">
-          ভেক্টর পর্ব-০২
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="IFS_rRMR_Rw" data-npdf="20240606-1717613653-bDXFuigc.pdf" tabindex="0">
-          ভেক্টর পর্ব-০৩
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="zZ3ZF4xOK50" data-npdf="20240613-1718273316-GjJPCZDx.pdf" tabindex="0">
-          ভেক্টর পর্ব-০৪
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="gmcIpu0XEMI" data-npdf="20240625-1719265797-tQNeUEdU.pdf" tabindex="0">
-          ভেক্টর পর্ব-০৫
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="jOywhzzraqE" data-npdf="20240627-1719430684-ZalntYC2.pdf" tabindex="0">
-          ভেক্টর পর্ব-০৬
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="WhfZmojIUtY" data-npdf="20240629-1719678055-kPEpLERk.pdf" tabindex="0">
-          ভেক্টর পর্ব-০৭
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="LyM9FiqUpKw" data-npdf="20240702-1719874283-KRSpu2B7.pdf" tabindex="0">
-          ভেক্টর পর্ব-০৮
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="-D14ShYTecI" data-npdf="20240704-1720036991-wBdjtGUE.pdf" tabindex="0">
-          ভেক্টর পর্ব-০৯
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="OCnLkCiR5ZY" data-npdf="20250321-1742499779-GwPYxsvB.pdf" tabindex="0">
-          ভেক্টর পর্ব-১০
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="PnaymqdGK_I" data-npdf="20240711-1720641347-fVm3uh5F.pdf" tabindex="0">
-          ভেক্টর পর্ব-১১
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="mNImFqFaEUU" data-npdf="20240714-1720899240-W1g7RfYY.pdf" tabindex="0">
-          ভেক্টর পর্ব-১২
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="jVfCnIg3tqE" data-npdf="20240818-1723919930-3fAQ77z2.pdf" tabindex="0">
-          ভেক্টর পর্ব - ১৩
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="6rbOpZfAdbk" data-npdf="20240820-1724103173-ZVYe71Xp.pdf" tabindex="0">
-          ভেক্টর পর্ব-১৪
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="Otx6FdWCuTo" data-npdf="20240822-1724273617-iuyiQjch.pdf" tabindex="0">
-          ভেক্টর পর্ব-১৫
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="hetd_SXnwVY" data-npdf="20240825-1724574942-0IfQe8fc.pdf" tabindex="0">
-          ভেক্টর পর্ব-১৬
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="qP0tgrgBtbo" data-npdf="20240827-1724746385-QNQPKWU6.pdf" tabindex="0">
-          ভেক্টর পর্ব-১৭
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="mG9cSAL-EMo" data-npdf="20240904-1725471995-we6v5DlQ.pdf" tabindex="0">
-          ভেক্টর Recap Class
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="zoKJyQWXp3o" data-npdf="20240907-1725729478-oVZ5StHK.pdf" tabindex="0">
-          নিউটনিয়ান বলবিদ্যা - পর্ব ০১
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="APPcCkykvNs" data-npdf="20240910-1725911627-3IB7EpLg.pdf" tabindex="0">
-          নিউটনিয়ান বলবিদ্যা - পর্ব ০২
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="PWLWR6lWAm8" data-npdf="20240912-1726085895-wF5wptTe.pdf" tabindex="0">
-          নিউটনিয়ান বলবিদ্যা - পর্ব ০৩
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="BS6rq0bOL6k" data-npdf="20240917-1726519586-8s1EWFoL.pdf" tabindex="0">
-          নিউটনিয়ান বলবিদ্যা - পর্ব ০৪
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="xkVeeJMHYP8" data-npdf="20240919-1726739785-H55orBak.pdf" tabindex="0">
-          নিউটনিয়ান বলবিদ্যা - পর্ব ০৫
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="cPpuexc8q2o" data-npdf="20240921-1726897769-r9RJuNkV.pdf" tabindex="0">
-          নিউটনিয়ান বলবিদ্যা - পর্ব ০৬
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="AJ0Bj5ZbaKM" data-npdf="20240921-1726897769-r9RJuNkV.pdf" tabindex="0">
-          নিউটনিয়ান বলবিদ্যা - পর্ব ৬.১
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="ZIChNNixXnU" data-npdf="20240922-1726945890-Z16b5DNP.pdf" tabindex="0">
-          নিউটনিয়ান বলবিদ্যা - পর্ব ০৭
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="PocGaxDjRv8" data-npdf="20240924-1727173846-VG0aZdjq.pdf" tabindex="0">
-          নিউটনিয়ান বলবিদ্যা - পর্ব ০৮
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="GglMV8lHwPs" data-npdf="20240929-1727547483-L5kB5ZCE.pdf" tabindex="0">
-          নিউটনিয়ান বলবিদ্যা - পর্ব ০৯
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="8xve_XeXGFo" data-npdf="20241001-1727731776-wte1hX69.pdf" tabindex="0">
-          নিউটনিয়ান বলবিদ্যা - পর্ব ১০
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="Jwl-ohnmx_A" data-npdf="20241003-1727892401-1f0saRNR.pdf" tabindex="0">
-          নিউটনিয়ান বলবিদ্যা - পর্ব ১১
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="sgEg0LgyWJo" data-npdf="20241005-1728140095-81jXgJba.pdf" tabindex="0">
-          নিউটনিয়ান বলবিদ্যা - পর্ব ১২
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="dBDJ9pyOUkk" data-npdf="20241008-1728326654-v8utxNvX.pdf" tabindex="0">
-          নিউটনিয়ান বলবিদ্যা - পর্ব ১৩
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="eS4vni3W4Ig" data-npdf="20241010-1728559567-JFT41oJp.pdf" tabindex="0">
-          নিউটনিয়ান বলবিদ্যা - পর্ব ১৪
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="DkphSGzgSRk" data-npdf="20241015-1728992961-Xvd59Eft.pdf" tabindex="0">
-          নিউটনিয়ান বলবিদ্যা - পর্ব ১৫
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="sU43BSOW-dk" data-npdf="20241017-1729167957-41SSmave.pdf" tabindex="0">
-          নিউটনিয়ান বলবিদ্যা - পর্ব ১৬
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="ap9cbg5bDEU" data-npdf="20241021-1729532737-C2hcIq30.pdf" tabindex="0">
-          নিউটনিয়ান বলবিদ্যা - পর্ব ১৭
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="iMmDXf5y0ME" data-npdf="20241027-1729967671-k7VuFpZy.pdf" tabindex="0">
-          কাজ, ক্ষমতা ও শক্তি - পর্ব ০১
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="DpC3HhfV2GI" data-npdf="20241028-1730137166-AHPrq6pw.pdf" tabindex="0">
-          কাজ, ক্ষমতা ও শক্তি - পর্ব ০২
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="3AGynUwep90" data-npdf="20241030-1730308515-tBK9Vqh4.pdf" tabindex="0">
-          কাজ, ক্ষমতা ও শক্তি - পর্ব ০৩
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="q_8wcyAfbLg" data-npdf="20241102-1730567282-LpEKOnjo.pdf" tabindex="0">
-          কাজ , শক্তি ও ক্ষমতা - পর্ব ০৪
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="pA-np42UI_o" data-npdf="20241105-1730748099-VvX8d6yc.pdf" tabindex="0">
-          কাজ , শক্তি ও ক্ষমতা - পর্ব ০৫
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="j090azZkbzw" data-npdf="20241110-1731196014-PuGxurGJ.pdf" tabindex="0">
-          কাজ, শক্তি ও ক্ষমতা - পর্ব ০৬
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="W3oO4ZegXoE" data-npdf="20241112-1731353138-QjPdN6yU.pdf" tabindex="0">
-          কাজ, শক্তি ও ক্ষমতা - পর্ব ৭.১
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="IFhwrXcAfgM" data-npdf="20241112-1731353138-QjPdN6yU.pdf" tabindex="0">
-          কাজ, শক্তি ও ক্ষমতা - পর্ব ৭.২
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="oJA9X4B69dY" data-npdf="20241116-1731771933-gmF08jrw.pdf" tabindex="0">
-          কাজ , শক্তি ও ক্ষমতা - পর্ব ০৮
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="uwiJjR_t-oA" data-npdf="20241116-1731774778-DQ3alOvI.pdf" tabindex="0">
-          কাজ , শক্তি ও ক্ষমতা - পর্ব ০৯
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="DvozjI579_c" data-npdf="20241118-1731947334-tltmjKkp.pdf" tabindex="0">
-          কাজ , শক্তি ও ক্ষমতা - পর্ব ১০
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="VDMxRBDnu38" data-npdf="20241123-1732384193-f3O2cUN1.pdf" tabindex="0">
-          মহাকর্ষ ও অভিকর্ষ - পর্ব ০১
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="zHvzIfXzQXE" data-npdf="20241126-1732568984-H2HlJC10.pdf" tabindex="0">
-          মহাকর্ষ ও অভিকর্ষ - পর্ব ০২
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="rczIRfN0c4s" data-npdf="20241127-1732721500-a4QvP7Xu.pdf" tabindex="0">
-          মহাকর্ষ ও অভিকর্ষ - পর্ব ০৩
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="mRFmORo1wKo" data-npdf="20241203-1733179611-vOBfdcok.pdf" tabindex="0">
-          মহাকর্ষ ও অভিকর্ষ - পর্ব ০৪
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="HkCPVf4hKu4" data-npdf="20241205-1733350027-3zyLvEKu.pdf" tabindex="0">
-          মহাকর্ষ ও অভিকর্ষ - পর্ব ০৫
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="kchLWczaM84" data-npdf="20241208-1733661793-j87uTK6U.pdf" tabindex="0">
-          মহাকর্ষ ও অভিকর্ষ - পর্ব ০৬
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="7rCa6Z9AM_0" data-npdf="20241213-1734033589-znKXzo9q.pdf" tabindex="0">
-          মহাকর্ষ ও অভিকর্ষ - পর্ব ০৭
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="hGuJiUtrtPY" data-npdf="20241215-1734208925-7jlSlQup.pdf" tabindex="0">
-          মহাকর্ষ ও অভিকর্ষ - পর্ব ০৮
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="bhIErsodIiI" data-npdf="20241216-1734295046-BIPsWq32.pdf" tabindex="0">
-          মহাকর্ষ ও অভিকর্ষ  - পর্ব ০৯
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="mgWkKivM7TI" data-npdf="20241219-1734549182-nb4N9cDS.pdf" tabindex="0">
-          মহাকর্ষ ও অভিকর্ষ - পর্ব ১০
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="bgs3omO-8Aw" data-npdf="20241222-1734808935-0Pl4D4wD.pdf" tabindex="0">
-          আদর্শ গ্যাস ও গ্যাসের গতিতত্ত্ব  -  পর্ব ০১
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="II5ceF38e8I" data-npdf="20241224-1734986517-14xcUizr.pdf" tabindex="0">
-          আদর্শ গ্যাস ও গ্যাসের গতিতত্ত্ব  -  পর্ব ০২
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="rXYdp1MKXEg" data-npdf="20241226-1735157159-03LaqyWX.pdf" tabindex="0">
-          আদর্শ গ্যাস ও গ্যাসের গতিতত্ত্ব  - পর্ব ০৩
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="a2KYM6I-xcY" data-npdf="20241229-1735417458-jHysnV4C.pdf" tabindex="0">
-          আদর্শ গ্যাস ও গ্যাসের গতিতত্ত্ব - পর্ব ০৪
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="R_R900QI3IA" data-npdf="20241231-1735586687-KcbuBT3Q.pdf" tabindex="0">
-          আদর্শ গ্যাস ও গ্যাসের গতিতত্ত্ব - পর্ব ০৫
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="1KbaMU0gUIQ" data-npdf="20250101-1735750599-96lbdL6n.pdf" tabindex="0">
-          আদর্শ গ্যাস ও গ্যাসের গতিতত্ত্ব - পর্ব ০৬
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="_2p37pNIFZI" data-npdf="20250105-1736019429-rEPSmMcX.pdf" tabindex="0">
-          পর্যায়বৃত্ত গতি - পর্ব ০১
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="qmDbwZp0epc" data-npdf="20250105-1736019678-vSSuBxaX.pdf" tabindex="0">
-          সৃজনশীল + প্র‍্যাক্টিস ক্লাস
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="B1kAtnRPz90" data-npdf="20250107-1736189272-WuBF5kkK.pdf" tabindex="0">
-          পর্যায়বৃত্ত গতি - পর্ব ০২
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="etzFqBrRnvY" data-npdf="20250109-1736362739-DarIWH7T.pdf" tabindex="0">
-          পর্যায়বৃত্ত গতি  - পর্ব ০৩
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="2rKrpiK7DZM" data-npdf="20250112-1736619592-irUHpR6t.pdf" tabindex="0">
-          পর্যায়বৃত্ত গতি - পর্ব ০৪
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="Adq1JNMdHxY" data-npdf="20250114-1736801247-LnFUSIOl.pdf" tabindex="0">
-          পর্যায়বৃত্ত গতি - পর্ব ০৫
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="J9GhQhkhOg8" data-npdf="20250116-1736967194-JSAZITsf.pdf" tabindex="0">
-          পর্যায়বৃত্ত গতি - পর্ব ০৬
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="LKvlWuKXK5s" data-npdf="20250119-1737228577-Y4UwCcbM.pdf" tabindex="0">
-          পর্যায়বৃত্ত গতি - পর্ব ০৭
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="RqgPG5pcwME" data-npdf="20250122-1737563666-j4m6lxOH.pdf" tabindex="0">
-          পদার্থের গাঠনিক ধর্ম - পর্ব ০১
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="R5WAE6_cB4g" data-npdf="20250126-1737830206-l1mpe7UI.pdf" tabindex="0">
-          পদার্থের গাঠনিক ধর্ম - পর্ব ০২
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="l2m2SfHqyBc" data-npdf="20250129-1738170474-o37Yd7jw.pdf" tabindex="0">
-          পদার্থের গাঠনিক ধর্ম - পর্ব ০৩
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="w0POBwb4g-8" data-npdf="20250202-1738434877-zNt87O4Y.pdf" tabindex="0">
-          পদার্থের গাঠনিক ধর্ম - পর্ব ৪.১
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="SUbSQEmYHFA" data-npdf="20250204-1738667232-HmGrmVnT.pdf" tabindex="0">
-          পদার্থের গাঠনিক ধর্ম - পর্ব ৪.২
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="2F75bQi54Ck" data-npdf="20250206-1738779597-oOviO2Ez.pdf" tabindex="0">
-          পদার্থের গাঠনিক ধর্ম - পর্ব ০৫
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="L4ZEQb71zVk" data-npdf="20250209-1739045893-A0YCP3RK.pdf" tabindex="0">
-          পদার্থের গাঠনিক ধর্ম - পর্ব ০৬
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="NlxDQ4p1J0c" data-npdf="20250218-1739823027-uMardrUs.pdf" tabindex="0">
-          তরঙ্গ - পর্ব ০১
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="Z5krAU-dSrM" data-npdf="20250220-1739995663-1aQ8s6Vy.pdf" tabindex="0">
-          তরঙ্গ - পর্ব ০২
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="lR9Y_2YsIAU" data-npdf="20250226-1740514038-hZ7CdkqB.pdf" tabindex="0">
-          তরঙ্গ - পর্ব ০৩
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="ls23DN-zOIA" data-npdf="20250304-1741030037-nPOcL9kd.pdf" tabindex="0">
-          তরঙ্গ - পর্ব ০৪
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="3V84wMOJbCw" data-npdf="20250311-1741683251-Kd3bWpSV.pdf" tabindex="0">
-          তরঙ্গ - পর্ব ০৫
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="IdYI7rSqzKc" data-npdf="20250307-1741285862-AbJZKWRI.pdf" tabindex="0">
-          তরঙ্গ - পর্ব ০৬
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="es-zRlN86-A" tabindex="0">
-          ভৌত জগৎ ও পরিমাপ - পর্ব ০১
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="dVVGWdW7hkY" data-npdf="20250312-1741716808-CvFMnwDc.pdf" tabindex="0">
-          ভৌত জগৎ - পর্ব ০২
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="jRhpgkIysQw" data-npdf="20250317-1742221505-PMPT3aGz.pdf" tabindex="0">
-          ভৌত জগৎ - পর্ব  ০৩
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="bnm-i9kPA-s" data-npdf="20250320-1742470128-uB0vPorJ.pdf" tabindex="0">
-          গতিবিদ্যা - পর্ব ০১
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="bCPvEITx19A" data-npdf="20250325-1742839906-jXd3APvc.pdf" tabindex="0">
-          গতিবিদ্যা - পর্ব ০২
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="ftKz3Fj4kSY" data-npdf="20250410-1744225519-Ue5zsfT3.pdf" tabindex="0">
-          গতিবিদ্যা - পর্ব ০৩
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="aaHJ_R2jsFU" data-npdf="20250413-1744489476-GItfEaXm.pdf" tabindex="0">
-          গতিবিদ্যা - পর্ব ০৪
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="TZcRgjoGcEI" data-npdf="20250415-1744663208-bdfZ6yzt.pdf" tabindex="0">
-          গতিবিদ্যা - পর্ব ০৫
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="nXnyYHPF-2Q" data-npdf="20250417-1744892394-3imGmgFC.pdf" tabindex="0">
-          গতিবিদ্যা - পর্ব  ০৬
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="zIAoadVATwU" data-npdf="20250420-1745093143-l9daYNMW.pdf" tabindex="0">
-          গতিবিদ্যা - পর্ব  ০৭
-        </li>
-        <li class="watchli cursor-pointer text-white px-3 py-2 rounded-md hover:bg-slate-700" data-vid="O3p6uxRIK24" data-npdf="20250422-1745272201-Vekf313F.pdf" tabindex="0">
-          গতিবিদ্যা - পর্ব ০৮
-        </li>
-    </ul>
-   </aside>
-  </main>
-  <!-- Footer -->
-  <footer class="bg-black text-white text-center py-2 text-sm">
-   Join our
-   <a class="text-red-600 hover:underline" href="#">
-    Facebook Group
-   </a>
-   for updates and discussions!
-  </footer>
-  <script>
-   const classList = document.getElementById('classList');
-   const videoPlayer = document.getElementById('videoPlayer');
-   const pdfDownload = document.getElementById('pdfDownload');
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physics 1st Paper</title>
+    <style>
+        /* Import fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
 
-   function clearSelected() {
-     document.querySelectorAll('.watchli.selected').forEach(el => {
-       el.classList.remove('selected');
-     });
-   }
+        /* CSS Variables */
+        :root {
+          --background: #121212;
+          --foreground: #f5f5f5;
+          --muted: #282828;
+          --muted-foreground: #a3a3a3;
+          --card: #1e1e1e;
+          --card-foreground: #f5f5f5;
+          --border: #303030;
+          --input: #303030;
+          --primary: #9333ea;
+          --primary-foreground: #ffffff;
+          --secondary: #10b981;
+          --secondary-foreground: #ffffff;
+          --accent: #f59e0b;
+          --accent-foreground: #1f2937;
+          --destructive: #ef4444;
+          --radius: 0.5rem;
+        }
 
-   classList.addEventListener('click', (e) => {
-     const li = e.target.closest('li.watchli');
-     if (!li) return;
+        /* Base Styles */
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
 
-     clearSelected();
-     li.classList.add('selected');
+        body {
+          font-family: 'Inter', sans-serif;
+          background-color: var(--background);
+          color: var(--foreground);
+          line-height: 1.5;
+          background-image: url('https://img.freepik.com/free-vector/abstract-blue-circle-black-background-technology_1142-12714.jpg?w=996');
+          background-size: cover;
+          background-attachment: fixed;
+          min-height: 100vh;
+          display: flex;
+          flex-direction: column;
+        }
 
-     const videoId = li.getAttribute('data-vid');
-     const pdfFile = li.getAttribute('data-npdf');
+        h1, h2, h3, h4, h5, h6 {
+          font-family: 'Poppins', sans-serif;
+          font-weight: 600;
+        }
 
-     if(videoId) {
-       videoPlayer.src = `https://www.youtube.com/embed/${videoId}`;
-     }
-     if(pdfFile) {
-       pdfDownload.href = `https://www.bondipathshala.com.bd/pdf/${pdfFile}`;
-     }
-   });
+        .container {
+          width: 100%;
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 0 1rem;
+        }
 
-   // Also allow keyboard navigation (Enter key) for accessibility
-   classList.addEventListener('keydown', (e) => {
-     if(e.key === 'Enter' || e.key === ' ') {
-       e.preventDefault();
-       const li = e.target.closest('li.watchli');
-       if (!li) return;
+        .hidden {
+          display: none !important;
+        }
 
-       clearSelected();
-       li.classList.add('selected');
+        .highlight {
+          color: var(--accent);
+        }
 
-       const videoId = li.getAttribute('data-vid');
-       const pdfFile = li.getAttribute('data-npdf');
+        /* Header */
+        .site-header {
+          background: linear-gradient(to right, var(--background), rgba(147, 51, 234, 0.8));
+          border-bottom: 1px solid rgba(147, 51, 234, 0.3);
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+          position: sticky;
+          top: 0;
+          z-index: 50;
+        }
 
-       if(videoId) {
-         videoPlayer.src = `https://www.youtube.com/embed/${videoId}`;
-       }
-       if(pdfFile) {
-         pdfDownload.href = `https://www.bondipathshala.com.bd/pdf/${pdfFile}`;
-       }
-     }
-   });
-  </script>
- </body>
+        .site-header .container {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0.75rem 1rem;
+        }
+
+        .logo-area {
+          display: flex;
+          align-items: center;
+          gap: 0.75rem;
+        }
+
+        .logo {
+          height: 2.5rem;
+        }
+
+        .site-title {
+          font-size: 1.25rem;
+          font-weight: 700;
+        }
+
+        .user-area {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+        }
+
+        .user-info {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          font-size: 0.875rem;
+        }
+
+        .logout-btn {
+          background-color: var(--primary);
+          color: var(--primary-foreground);
+          border: none;
+          border-radius: var(--radius);
+          padding: 0.375rem 0.75rem;
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          cursor: pointer;
+          transition: background-color 0.2s;
+          font-family: inherit;
+          font-size: 0.875rem;
+        }
+
+        .logout-btn:hover {
+          background-color: rgba(147, 51, 234, 0.8);
+        }
+
+        /* Main Content */
+        .main-content {
+          display: flex;
+          flex-direction: column;
+          gap: 1.5rem;
+          padding: 1rem;
+          flex-grow: 1;
+        }
+
+        /* Video Container */
+        .video-container {
+          width: 100%;
+        }
+
+        .video-card {
+          background-color: var(--card);
+          border-radius: var(--radius);
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          overflow: hidden;
+          border: 1px solid rgba(147, 51, 234, 0.2);
+        }
+
+        .video-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0.75rem 1rem;
+          border-bottom: 1px solid var(--border);
+        }
+
+        .video-title {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          font-size: 1.125rem;
+          color: var(--foreground);
+        }
+
+        .video-title i {
+          color: var(--accent);
+        }
+
+        .video-meta {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+        }
+
+        .label {
+          font-size: 0.75rem;
+          padding: 0.25rem 0.5rem;
+          border-radius: var(--radius);
+        }
+
+        .label.live {
+          background-color: var(--primary);
+          color: var(--primary-foreground);
+        }
+
+        .label.duration {
+          background-color: var(--muted);
+          color: var(--muted-foreground);
+        }
+
+        .video-player-container {
+          position: relative;
+          width: 100%;
+          aspect-ratio: 16/9;
+          background-color: #000;
+        }
+
+        .video-thumbnail {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          cursor: pointer;
+        }
+
+        .thumbnail-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          opacity: 0.7;
+        }
+
+        .play-button-overlay {
+          position: absolute;
+          inset: 0;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .play-button {
+          width: 5rem;
+          height: 5rem;
+          border-radius: 50%;
+          background-color: rgba(245, 158, 11, 0.9);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+          transition: background-color 0.2s;
+        }
+
+        .play-button i {
+          font-size: 2.5rem;
+          color: white;
+          margin-left: 0.5rem; /* Center the play icon */
+        }
+
+        .play-button:hover {
+          background-color: var(--accent);
+        }
+
+        .click-to-play {
+          position: absolute;
+          bottom: 1rem;
+          left: 0;
+          right: 0;
+          background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+          color: white;
+          font-weight: 500;
+          padding: 1rem;
+        }
+
+        .youtube-embed {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+        }
+
+        .youtube-embed iframe {
+          width: 100%;
+          height: 100%;
+          border: 0;
+        }
+
+        .video-actions {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.75rem;
+          padding: 1rem;
+          background: linear-gradient(to bottom, var(--muted), var(--card));
+        }
+
+        .action-btn {
+          flex: 1;
+          min-width: 140px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 0.625rem 1rem;
+          border-radius: var(--radius);
+          border: none;
+          font-family: inherit;
+          font-size: 0.875rem;
+          font-weight: 500;
+          cursor: pointer;
+          transition: all 0.2s;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .action-btn:hover {
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .action-btn i {
+          margin-right: 0.5rem;
+        }
+
+        .download-btn {
+          background-color: var(--secondary);
+          color: var(--secondary-foreground);
+        }
+
+        .download-btn:hover {
+          background-color: rgba(16, 185, 129, 0.8);
+        }
+
+        .youtube-btn {
+          background-color: var(--accent);
+          color: var(--accent-foreground);
+        }
+
+        .youtube-btn:hover {
+          background-color: rgba(245, 158, 11, 0.8);
+        }
+
+        /* Class List */
+        .class-list-container {
+          width: 100%;
+        }
+
+        .class-list-card {
+          background-color: var(--card);
+          border-radius: var(--radius);
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          overflow: hidden;
+          border: 1px solid rgba(147, 51, 234, 0.2);
+          display: flex;
+          flex-direction: column;
+          height: 100%;
+        }
+
+        .class-list-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0.5rem 0.75rem;
+          border-bottom: 1px solid var(--border);
+        }
+
+        .list-title {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          font-size: 1rem;
+          color: var(--foreground);
+        }
+
+        .list-title i {
+          color: var(--accent);
+        }
+
+        .list-actions {
+          display: flex;
+          gap: 0.5rem;
+        }
+
+        .icon-btn {
+          background-color: var(--muted);
+          color: var(--muted-foreground);
+          border: none;
+          border-radius: var(--radius);
+          width: 2rem;
+          height: 2rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 0.75rem;
+          cursor: pointer;
+          transition: background-color 0.2s;
+        }
+
+        .icon-btn:hover {
+          background-color: rgba(147, 51, 234, 0.3);
+        }
+
+        .category-filters {
+          padding: 0.5rem 0.75rem;
+          background-color: var(--muted);
+          border-bottom: 1px solid var(--border);
+        }
+
+        .filter-scroll {
+          display: flex;
+          gap: 0.5rem;
+          overflow-x: auto;
+          padding-bottom: 0.25rem;
+        }
+
+        .filter-scroll::-webkit-scrollbar {
+          height: 4px;
+        }
+
+        .filter-scroll::-webkit-scrollbar-track {
+          background: var(--muted);
+          border-radius: 2px;
+        }
+
+        .filter-scroll::-webkit-scrollbar-thumb {
+          background: var(--primary);
+          border-radius: 2px;
+        }
+
+        .category-btn {
+          background-color: var(--card);
+          color: var(--muted-foreground);
+          border: none;
+          border-radius: 9999px;
+          padding: 0.25rem 0.75rem;
+          font-size: 0.75rem;
+          white-space: nowrap;
+          cursor: pointer;
+          transition: all 0.2s;
+        }
+
+        .category-btn:hover {
+          background-color: var(--muted);
+        }
+
+        .category-btn.active {
+          background-color: var(--primary);
+          color: var(--primary-foreground);
+        }
+
+        .class-items {
+          list-style: none;
+          overflow-y: auto;
+          max-height: 500px;
+          flex-grow: 1;
+        }
+
+        .class-items::-webkit-scrollbar {
+          width: 4px;
+        }
+
+        .class-items::-webkit-scrollbar-track {
+          background: var(--muted);
+          border-radius: 2px;
+        }
+
+        .class-items::-webkit-scrollbar-thumb {
+          background: var(--primary);
+          border-radius: 2px;
+        }
+
+        .class-item {
+          padding: 0.5rem 0.75rem;
+          border-bottom: 1px solid rgba(147, 51, 234, 0.1);
+          cursor: pointer;
+          position: relative;
+          transition: all 0.2s;
+        }
+
+        .class-item:hover {
+          background-color: rgba(147, 51, 234, 0.1);
+        }
+
+        .class-item.selected {
+          background-color: rgba(147, 51, 234, 0.2);
+          border-left: 4px solid var(--primary);
+        }
+
+        .selected-indicator {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          width: 2px;
+          background-color: var(--accent);
+        }
+
+        .class-item-content {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+        }
+
+        .class-info {
+          display: flex;
+          gap: 0.75rem;
+        }
+
+        .class-icon {
+          position: relative;
+          margin-top: 0.125rem;
+        }
+
+        .class-icon i {
+          font-size: 1.125rem;
+          color: var(--muted-foreground);
+        }
+
+        .selected .class-icon i {
+          color: var(--accent);
+        }
+
+        .playing-indicator {
+          position: absolute;
+          top: -0.25rem;
+          right: -0.25rem;
+          width: 0.75rem;
+          height: 0.75rem;
+        }
+
+        .playing-indicator-ping {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          background-color: var(--accent);
+          opacity: 0.75;
+          animation: ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+        }
+
+        .playing-indicator-dot {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          background-color: var(--accent);
+        }
+
+        @keyframes ping {
+          75%, 100% {
+            transform: scale(2);
+            opacity: 0;
+          }
+        }
+
+        .class-details {
+          flex-grow: 1;
+          min-width: 0; /* Ensure text truncation works */
+        }
+
+        .class-title {
+          font-size: 0.875rem;
+          font-weight: 500;
+          margin-bottom: 0.25rem;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
+        .selected .class-title {
+          color: white;
+        }
+
+        .class-meta {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.5rem;
+          font-size: 0.75rem;
+          color: var(--muted-foreground);
+        }
+
+        .class-meta-item {
+          display: flex;
+          align-items: center;
+          gap: 0.25rem;
+        }
+
+        .now-playing {
+          color: var(--accent);
+          display: flex;
+          align-items: center;
+          gap: 0.25rem;
+        }
+
+        .now-playing i {
+          font-size: 0.625rem;
+          animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+          0% {
+            opacity: 1;
+          }
+          50% {
+            opacity: 0.5;
+          }
+          100% {
+            opacity: 1;
+          }
+        }
+
+        .class-pdf-link {
+          color: var(--secondary);
+          text-decoration: none;
+          font-size: 0.75rem;
+          display: flex;
+          align-items: center;
+          gap: 0.25rem;
+          transition: color 0.2s;
+        }
+
+        .class-pdf-link:hover {
+          color: rgba(16, 185, 129, 0.8);
+        }
+
+        /* Footer */
+        .site-footer {
+          background-color: var(--background);
+          border-top: 1px solid var(--border);
+          margin-top: 2rem;
+        }
+
+        .footer-content {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          gap: 2rem;
+          padding: 1.5rem 0;
+        }
+
+        .footer-logo {
+          flex: 1;
+          min-width: 200px;
+        }
+
+        .footer-logo img {
+          height: 2rem;
+          margin-bottom: 0.5rem;
+        }
+
+        .footer-logo p {
+          font-size: 0.875rem;
+          color: var(--muted-foreground);
+        }
+
+        .footer-quote {
+          flex: 2;
+          min-width: 300px;
+          font-size: 0.875rem;
+          color: var(--muted-foreground);
+        }
+
+        .quote-author {
+          text-align: right;
+          font-size: 0.75rem;
+          margin-top: 0.25rem;
+        }
+
+        .footer-social {
+          display: flex;
+          gap: 1rem;
+        }
+
+        .social-link {
+          color: var(--muted-foreground);
+          transition: color 0.2s;
+        }
+
+        .social-link:hover {
+          color: var(--accent);
+        }
+
+        .footer-copyright {
+          text-align: center;
+          padding: 1.5rem 0;
+          border-top: 1px solid var(--border);
+          font-size: 0.75rem;
+          color: var(--muted-foreground);
+        }
+
+        /* Responsive Styles */
+        @media (min-width: 768px) {
+          .main-content {
+            flex-direction: row;
+          }
+
+          .video-container {
+            width: 60%;
+          }
+
+          .class-list-container {
+            width: 40%;
+          }
+
+          .logout-btn span {
+            display: inline;
+          }
+        }
+
+        @media (max-width: 767px) {
+          .logout-btn span {
+            display: none;
+          }
+
+          .user-info span {
+            display: none;
+          }
+
+          .footer-content {
+            flex-direction: column;
+            gap: 1.5rem;
+          }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <meta name="description" content="Online learning platform for Chemistry 1st Paper - HSC 2026 with video lessons and downloadable materials">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <div class="logo-area">
+                <img src="https://bondipathshala.com.bd/files/logo.png" alt="Bondi Pathshala Logo" class="logo">
+                <h1 class="site-title"><span class="highlight">Chemistry</span> 1st Paper - HSC 2026</h1>
+            </div>
+            <div class="user-area">
+                <div class="user-info">
+                    <i class="fas fa-user-graduate"></i>
+                    <span>Student</span>
+                </div>
+                <button class="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container main-content">
+        <div class="video-container">
+            <div class="video-card">
+                <div class="video-header">
+                    <h2 class="video-title">
+                        <i class="fas fa-play-circle"></i>
+                        <span id="current-video-title">Loading...</span>
+                    </h2>
+                    <div class="video-meta">
+                        <span class="label live">LIVE</span>
+                        <span class="label duration" id="current-video-duration">00:00</span>
+                    </div>
+                </div>
+
+                <div class="video-player-container">
+                    <div id="video-thumbnail-container" class="video-thumbnail">
+                        <img id="video-thumbnail" src="" alt="Video thumbnail" class="thumbnail-img">
+                        <div class="play-button-overlay">
+                            <div class="play-button">
+                                <i class="fas fa-play"></i>
+                            </div>
+                            <p class="click-to-play">Click to play video</p>
+                        </div>
+                    </div>
+
+                    <div id="youtube-embed-container" class="youtube-embed hidden">
+                        <iframe id="youtube-iframe"
+                            frameborder="0"
+                            allowfullscreen
+                            loading="lazy"
+                            title="Class video">
+                        </iframe>
+                    </div>
+                </div>
+
+                <div class="video-actions">
+                    <button id="download-pdf-btn" class="action-btn download-btn">
+                        <i class="fas fa-file-pdf"></i>
+                        <span>Download PDF</span>
+                    </button>
+                    <button id="open-youtube-btn" class="action-btn youtube-btn">
+                        <i class="fab fa-youtube"></i>
+                        <span>Open on YouTube</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="class-list-container">
+            <div class="class-list-card">
+                <div class="class-list-header">
+                    <h2 class="list-title">
+                        <i class="fas fa-list-ul"></i>
+                        Class List
+                    </h2>
+                    <div class="list-actions">
+                        <button class="icon-btn filter-btn">
+                            <i class="fas fa-filter"></i>
+                        </button>
+                        <button class="icon-btn search-btn">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="category-filters">
+                    <div class="filter-scroll">
+                        </div>
+                </div>
+
+                <ul id="class-list" class="class-items">
+                    </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="https://bondipathshala.com.bd/files/logo.png" alt="Bondi Pathshala Logo" class="logo">
+                    <p>Empowering students with quality education since 2015</p>
+                </div>
+                <div class="footer-quote">
+                    <p>"The scientist is not a person who gives the right answers, but one who asks the right questions."</p>
+                    <p class="quote-author">- Claude Lévi-Strauss</p>
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                &copy; <span id="current-year"></span> Bondi Pathshala. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Class data for the chemistry course
+        const classData = [
+          [
+  {
+    "videoId": "vylbU3GFmK4",
+    "title": "Course Roadmap",
+    "pdfLink": "20240525-1716657674-IVrmjDy0.pdf",
+    "duration": "N/A",
+    "date": "May 25, 2024",
+    "category": "Course Roadmap"
+  },
+  {
+    "videoId": "0zDP1tRa_Rg",
+    "title": "Basic Calculus Part-01",
+    "pdfLink": "20240527-1716831877-G1BCFR3A.pdf",
+    "duration": "N/A",
+    "date": "May 27, 2024",
+    "category": "Basic Calculus"
+  },
+  {
+    "videoId": "MEOX9DUGnHM",
+    "title": "Basic Calculus Part-02",
+    "pdfLink": "20240530-1717014224-ZcQItppI.pdf",
+    "duration": "N/A",
+    "date": "May 30, 2024",
+    "category": "Basic Calculus"
+  },
+  {
+    "videoId": "0A_uR7cgz6o",
+    "title": "ভেক্টর পর্ব-০১",
+    "pdfLink": "20240602-1717273188-yPWNIZKo.pdf",
+    "duration": "N/A",
+    "date": "Jun 02, 2024",
+    "category": "ভেক্টর"
+  },
+  {
+    "videoId": "IvHcZd-N-R8",
+    "title": "ভেক্টর পর্ব-০২",
+    "pdfLink": "20240604-1717444477-q4WOdXXM.pdf",
+    "duration": "N/A",
+    "date": "Jun 04, 2024",
+    "category": "ভেক্টর"
+  },
+  {
+    "videoId": "IFS_rRMR_Rw",
+    "title": "ভেক্টর পর্ব-০৩",
+    "pdfLink": "20240606-1717613653-bDXFuigc.pdf",
+    "duration": "N/A",
+    "date": "Jun 06, 2024",
+    "category": "ভেক্টর"
+  },
+  {
+    "videoId": "zZ3ZF4xOK50",
+    "title": "ভেক্টর পর্ব-০৪",
+    "pdfLink": "20240613-1718273316-GjJPCZDx.pdf",
+    "duration": "N/A",
+    "date": "Jun 13, 2024",
+    "category": "ভেক্টর"
+  },
+  {
+    "videoId": "gmcIpu0XEMI",
+    "title": "ভেক্টর পর্ব-০৫",
+    "pdfLink": "20240625-1719265797-tQNeUEdU.pdf",
+    "duration": "N/A",
+    "date": "Jun 25, 2024",
+    "category": "ভেক্টর"
+  },
+  {
+    "videoId": "jOywhzzraqE",
+    "title": "ভেক্টর পর্ব-০৬",
+    "pdfLink": "20240627-1719430684-ZalntYC2.pdf",
+    "duration": "N/A",
+    "date": "Jun 27, 2024",
+    "category": "ভেক্টর"
+  },
+  {
+    "videoId": "WhfZmojIUtY",
+    "title": "ভেক্টর পর্ব-০৭",
+    "pdfLink": "20240629-1719678055-kPEpLERk.pdf",
+    "duration": "N/A",
+    "date": "Jun 29, 2024",
+    "category": "ভেক্টর"
+  },
+  {
+    "videoId": "LyM9FiqUpKw",
+    "title": "ভেক্টর পর্ব-০৮",
+    "pdfLink": "20240702-1719874283-KRSpu2B7.pdf",
+    "duration": "N/A",
+    "date": "Jul 02, 2024",
+    "category": "ভেক্টর"
+  },
+  {
+    "videoId": "-D14ShYTecI",
+    "title": "ভেক্টর পর্ব-০৯",
+    "pdfLink": "20240704-1720036991-wBdjtGUE.pdf",
+    "duration": "N/A",
+    "date": "Jul 04, 2024",
+    "category": "ভেক্টর"
+  },
+  {
+    "videoId": "OCnLkCiR5ZY",
+    "title": "ভেক্টর পর্ব-১০",
+    "pdfLink": "20250321-1742499779-GwPYxsvB.pdf",
+    "duration": "N/A",
+    "date": "Mar 21, 2025",
+    "category": "ভেক্টর"
+  },
+  {
+    "videoId": "PnaymqdGK_I",
+    "title": "ভেক্টর পর্ব-১১",
+    "pdfLink": "20240711-1720641347-fVm3uh5F.pdf",
+    "duration": "N/A",
+    "date": "Jul 11, 2024",
+    "category": "ভেক্টর"
+  },
+  {
+    "videoId": "mNImFqFaEUU",
+    "title": "ভেক্টর পর্ব-১২",
+    "pdfLink": "20240714-1720899240-W1g7RfYY.pdf",
+    "duration": "N/A",
+    "date": "Jul 14, 2024",
+    "category": "ভেক্টর"
+  },
+  {
+    "videoId": "jVfCnIg3tqE",
+    "title": "ভেক্টর পর্ব - ১৩",
+    "pdfLink": "20240818-1723919930-3fAQ77z2.pdf",
+    "duration": "N/A",
+    "date": "Aug 18, 2024",
+    "category": "ভেক্টর"
+  },
+  {
+    "videoId": "6rbOpZfAdbk",
+    "title": "ভেক্টর পর্ব-১৪",
+    "pdfLink": "20240820-1724103173-ZVYe71Xp.pdf",
+    "duration": "N/A",
+    "date": "Aug 20, 2024",
+    "category": "ভেক্টর"
+  },
+  {
+    "videoId": "Otx6FdWCuTo",
+    "title": "ভেক্টর পর্ব-১৫",
+    "pdfLink": "20240822-1724273617-iuyiQjch.pdf",
+    "duration": "N/A",
+    "date": "Aug 22, 2024",
+    "category": "ভেক্টর"
+  },
+  {
+    "videoId": "hetd_SXnwVY",
+    "title": "ভেক্টর পর্ব-১৬",
+    "pdfLink": "20240825-1724574942-0IfQe8fc.pdf",
+    "duration": "N/A",
+    "date": "Aug 25, 2024",
+    "category": "ভেক্টর"
+  },
+  {
+    "videoId": "qP0tgrgBtbo",
+    "title": "ভেক্টর পর্ব-১৭",
+    "pdfLink": "20240827-1724746385-QNQPKWU6.pdf",
+    "duration": "N/A",
+    "date": "Aug 27, 2024",
+    "category": "ভেক্টর"
+  },
+  {
+    "videoId": "mG9cSAL-EMo",
+    "title": "ভেক্টর Recap Class",
+    "pdfLink": "20240904-1725471995-we6v5DlQ.pdf",
+    "duration": "N/A",
+    "date": "Sep 04, 2024",
+    "category": "ভেক্টর"
+  },
+  {
+    "videoId": "zoKJyQWXp3o",
+    "title": "নিউটনিয়ান বলবিদ্যা - পর্ব ০১",
+    "pdfLink": "20240907-1725729478-oVZ5StHK.pdf",
+    "duration": "N/A",
+    "date": "Sep 07, 2024",
+    "category": "নিউটনিয়ান বলবিদ্যা"
+  },
+  {
+    "videoId": "APPcCkykvNs",
+    "title": "নিউটনিয়ান বলবিদ্যা - পর্ব ০২",
+    "pdfLink": "20240910-1725911627-3IB7EpLg.pdf",
+    "duration": "N/A",
+    "date": "Sep 10, 2024",
+    "category": "নিউটনিয়ান বলবিদ্যা"
+  },
+  {
+    "videoId": "PWLWR6lWAm8",
+    "title": "নিউটনিয়ান বলবিদ্যা - পর্ব ০৩",
+    "pdfLink": "20240912-1726085895-wF5wptTe.pdf",
+    "duration": "N/A",
+    "date": "Sep 12, 2024",
+    "category": "নিউটনিয়ান বলবিদ্যা"
+  },
+  {
+    "videoId": "BS6rq0bOL6k",
+    "title": "নিউটনিয়ান বলবিদ্যা - পর্ব ০৪",
+    "pdfLink": "20240917-1726519586-8s1EWFoL.pdf",
+    "duration": "N/A",
+    "date": "Sep 17, 2024",
+    "category": "নিউটনিয়ান বলবিদ্যা"
+  },
+  {
+    "videoId": "xkVeeJMHYP8",
+    "title": "নিউটনিয়ান বলবিদ্যা - পর্ব ০৫",
+    "pdfLink": "20240919-1726739785-H55orBak.pdf",
+    "duration": "N/A",
+    "date": "Sep 19, 2024",
+    "category": "নিউটনিয়ান বলবিদ্যা"
+  },
+  {
+    "videoId": "cPpuexc8q2o",
+    "title": "নিউটনিয়ান বলবিদ্যা - পর্ব ০৬",
+    "pdfLink": "20240921-1726897769-r9RJuNkV.pdf",
+    "duration": "N/A",
+    "date": "Sep 21, 2024",
+    "category": "নিউটনিয়ান বলবিদ্যা"
+  },
+  {
+    "videoId": "AJ0Bj5ZbaKM",
+    "title": "নিউটনিয়ান বলবিদ্যা - পর্ব ৬.১",
+    "pdfLink": "20240921-1726897769-r9RJuNkV.pdf",
+    "duration": "N/A",
+    "date": "Sep 21, 2024",
+    "category": "নিউটনিয়ান বলবিদ্যা"
+  },
+  {
+    "videoId": "ZIChNNixXnU",
+    "title": "নিউটনিয়ান বলবিদ্যা - পর্ব ০৭",
+    "pdfLink": "20240922-1726945890-Z16b5DNP.pdf",
+    "duration": "N/A",
+    "date": "Sep 22, 2024",
+    "category": "নিউটনিয়ান বলবিদ্যা"
+  },
+  {
+    "videoId": "PocGaxDjRv8",
+    "title": "নিউটনিয়ান বলবিদ্যা - পর্ব ০৮",
+    "pdfLink": "20240924-1727173846-VG0aZdjq.pdf",
+    "duration": "N/A",
+    "date": "Sep 24, 2024",
+    "category": "নিউটনিয়ান বলবিদ্যা"
+  },
+  {
+    "videoId": "GglMV8lHwPs",
+    "title": "নিউটনিয়ান বলবিদ্যা - পর্ব ০৯",
+    "pdfLink": "20240929-1727547483-L5kB5ZCE.pdf",
+    "duration": "N/A",
+    "date": "Sep 29, 2024",
+    "category": "নিউটনিয়ান বলবিদ্যা"
+  },
+  {
+    "videoId": "8xve_XeXGFo",
+    "title": "নিউটনিয়ান বলবিদ্যা - পর্ব ১০",
+    "pdfLink": "20241001-1727731776-wte1hX69.pdf",
+    "duration": "N/A",
+    "date": "Oct 01, 2024",
+    "category": "নিউটনিয়ান বলবিদ্যা"
+  },
+  {
+    "videoId": "Jwl-ohnmx_A",
+    "title": "নিউটনিয়ান বলবিদ্যা - পর্ব ১১",
+    "pdfLink": "20241003-1727892401-1f0saRNR.pdf",
+    "duration": "N/A",
+    "date": "Oct 03, 2024",
+    "category": "নিউটনিয়ান বলবিদ্যা"
+  },
+  {
+    "videoId": "sgEg0LgyWJo",
+    "title": "নিউটনিয়ান বলবিদ্যা - পর্ব ১২",
+    "pdfLink": "20241005-1728140095-81jXgJba.pdf",
+    "duration": "N/A",
+    "date": "Oct 05, 2024",
+    "category": "নিউটনিয়ান বলবিদ্যা"
+  },
+  {
+    "videoId": "dBDJ9pyOUkk",
+    "title": "নিউটনিয়ান বলবিদ্যা - পর্ব ১৩",
+    "pdfLink": "20241008-1728326654-v8utxNvX.pdf",
+    "duration": "N/A",
+    "date": "Oct 08, 2024",
+    "category": "নিউটনিয়ান বলবিদ্যা"
+  },
+  {
+    "videoId": "eS4vni3W4Ig",
+    "title": "নিউটনিয়ান বলবিদ্যা - পর্ব ১৪",
+    "pdfLink": "20241010-1728559567-JFT41oJp.pdf",
+    "duration": "N/A",
+    "date": "Oct 10, 2024",
+    "category": "নিউটনিয়ান বলবিদ্যা"
+  },
+  {
+    "videoId": "DkphSGzgSRk",
+    "title": "নিউটনিয়ান বলবিদ্যা - পর্ব ১৫",
+    "pdfLink": "20241015-1728992961-Xvd59Eft.pdf",
+    "duration": "N/A",
+    "date": "Oct 15, 2024",
+    "category": "নিউটনিয়ান বলবিদ্যা"
+  },
+  {
+    "videoId": "sU43BSOW-dk",
+    "title": "নিউটনিয়ান বলবিদ্যা - পর্ব ১৬",
+    "pdfLink": "20241017-1729167957-41SSmave.pdf",
+    "duration": "N/A",
+    "date": "Oct 17, 2024",
+    "category": "নিউটনিয়ান বলবিদ্যা"
+  },
+  {
+    "videoId": "ap9cbg5bDEU",
+    "title": "নিউটনিয়ান বলবিদ্যা - পর্ব ১৭",
+    "pdfLink": "20241021-1729532737-C2hcIq30.pdf",
+    "duration": "N/A",
+    "date": "Oct 21, 2024",
+    "category": "নিউটনিয়ান বলবিদ্যা"
+  },
+  {
+    "videoId": "iMmDXf5y0ME",
+    "title": "কাজ, ক্ষমতা ও শক্তি - পর্ব ০১",
+    "pdfLink": "20241027-1729967671-k7VuFpZy.pdf",
+    "duration": "N/A",
+    "date": "Oct 27, 2024",
+    "category": "কাজ, ক্ষমতা ও শক্তি"
+  },
+  {
+    "videoId": "DpC3HhfV2GI",
+    "title": "কাজ, ক্ষমতা ও শক্তি - পর্ব ০২",
+    "pdfLink": "20241028-1730137166-AHPrq6pw.pdf",
+    "duration": "N/A",
+    "date": "Oct 28, 2024",
+    "category": "কাজ, ক্ষমতা ও শক্তি"
+  },
+  {
+    "videoId": "3AGynUwep90",
+    "title": "কাজ, ক্ষমতা ও শক্তি - পর্ব ০৩",
+    "pdfLink": "20241030-1730308515-tBK9Vqh4.pdf",
+    "duration": "N/A",
+    "date": "Oct 30, 2024",
+    "category": "কাজ, ক্ষমতা ও শক্তি"
+  },
+  {
+    "videoId": "q_8wcyAfbLg",
+    "title": "কাজ , শক্তি ও ক্ষমতা - পর্ব ০৪",
+    "pdfLink": "20241102-1730567282-LpEKOnjo.pdf",
+    "duration": "N/A",
+    "date": "Nov 02, 2024",
+    "category": "কাজ, ক্ষমতা ও শক্তি"
+  },
+  {
+    "videoId": "pA-np42UI_o",
+    "title": "কাজ , শক্তি ও ক্ষমতা - পর্ব ০৫",
+    "pdfLink": "20241105-1730748099-VvX8d6yc.pdf",
+    "duration": "N/A",
+    "date": "Nov 05, 2024",
+    "category": "কাজ, ক্ষমতা ও শক্তি"
+  },
+  {
+    "videoId": "j090azZkbzw",
+    "title": "কাজ, শক্তি ও ক্ষমতা - পর্ব ০৬",
+    "pdfLink": "20241110-1731196014-PuGxurGJ.pdf",
+    "duration": "N/A",
+    "date": "Nov 10, 2024",
+    "category": "কাজ, ক্ষমতা ও শক্তি"
+  },
+  {
+    "videoId": "W3oO4ZegXoE",
+    "title": "কাজ, শক্তি ও ক্ষমতা - পর্ব ৭.1",
+    "pdfLink": "20241112-1731353138-QjPdN6yU.pdf",
+    "duration": "N/A",
+    "date": "Nov 12, 2024",
+    "category": "কাজ, ক্ষমতা ও শক্তি"
+  },
+  {
+    "videoId": "IFhwrXcAfgM",
+    "title": "কাজ, শক্তি ও ক্ষমতা - পর্ব ৭.2",
+    "pdfLink": "20241112-1731353138-QjPdN6yU.pdf",
+    "duration": "N/A",
+    "date": "Nov 12, 2024",
+    "category": "কাজ, ক্ষমতা ও শক্তি"
+  },
+  {
+    "videoId": "oJA9X4B69dY",
+    "title": "কাজ , শক্তি ও ক্ষমতা - পর্ব ০৮",
+    "pdfLink": "20241116-1731771933-gmF08jrw.pdf",
+    "duration": "N/A",
+    "date": "Nov 16, 2024",
+    "category": "কাজ, ক্ষমতা ও শক্তি"
+  },
+  {
+    "videoId": "uwiJjR_t-oA",
+    "title": "কাজ , শক্তি ও ক্ষমতা - পর্ব ০৯",
+    "pdfLink": "20241116-1731774778-DQ3alOvI.pdf",
+    "duration": "N/A",
+    "date": "Nov 16, 2024",
+    "category": "কাজ, ক্ষমতা ও শক্তি"
+  },
+  {
+    "videoId": "DvozjI579_c",
+    "title": "কাজ , শক্তি ও ক্ষমতা - পর্ব ১০",
+    "pdfLink": "20241118-1731947334-tltmjKkp.pdf",
+    "duration": "N/A",
+    "date": "Nov 18, 2024",
+    "category": "কাজ, ক্ষমতা ও শক্তি"
+  },
+  {
+    "videoId": "VDMxRBDnu38",
+    "title": "মহাকর্ষ ও অভিকর্ষ - পর্ব ০১",
+    "pdfLink": "20241123-1732384193-f3O2cUN1.pdf",
+    "duration": "N/A",
+    "date": "Nov 23, 2024",
+    "category": "মহাকর্ষ ও অভিকর্ষ"
+  },
+  {
+    "videoId": "zHvzIfXzQXE",
+    "title": "মহাকর্ষ ও অভিকর্ষ - পর্ব ০২",
+    "pdfLink": "20241126-1732568984-H2HlJC10.pdf",
+    "duration": "N/A",
+    "date": "Nov 26, 2024",
+    "category": "মহাকর্ষ ও অভিকর্ষ"
+  },
+  {
+    "videoId": "rczIRfN0c4s",
+    "title": "মহাকর্ষ ও অভিকর্ষ - পর্ব ০৩",
+    "pdfLink": "20241127-1732721500-a4QvP7Xu.pdf",
+    "duration": "N/A",
+    "date": "Nov 27, 2024",
+    "category": "মহাকর্ষ ও অভিকর্ষ"
+  },
+  {
+    "videoId": "mRFmORo1wKo",
+    "title": "মহাকর্ষ ও অভিকর্ষ - পর্ব ০৪",
+    "pdfLink": "20241203-1733179611-vOBfdcok.pdf",
+    "duration": "N/A",
+    "date": "Dec 03, 2024",
+    "category": "মহাকর্ষ ও অভিকর্ষ"
+  },
+  {
+    "videoId": "HkCPVf4hKu4",
+    "title": "মহাকর্ষ ও অভিকর্ষ - পর্ব ০৫",
+    "pdfLink": "20241205-1733350027-3zyLvEKu.pdf",
+    "duration": "N/A",
+    "date": "Dec 05, 2024",
+    "category": "মহাকর্ষ ও অভিকর্ষ"
+  },
+  {
+    "videoId": "kchLWczaM84",
+    "title": "মহাকর্ষ ও অভিকর্ষ - পর্ব ০৬",
+    "pdfLink": "20241208-1733661793-j87uTK6U.pdf",
+    "duration": "N/A",
+    "date": "Dec 08, 2024",
+    "category": "মহাকর্ষ ও অভিকর্ষ"
+  },
+  {
+    "videoId": "7rCa6Z9AM_0",
+    "title": "মহাকর্ষ ও অভিকর্ষ - পর্ব ০৭",
+    "pdfLink": "20241213-1734033589-znKXzo9q.pdf",
+    "duration": "N/A",
+    "date": "Dec 13, 2024",
+    "category": "মহাকর্ষ ও অভিকর্ষ"
+  },
+  {
+    "videoId": "hGuJiUtrtPY",
+    "title": "মহাকর্ষ ও অভিকর্ষ - পর্ব ০৮",
+    "pdfLink": "20241215-1734208925-7jlSlQup.pdf",
+    "duration": "N/A",
+    "date": "Dec 15, 2024",
+    "category": "মহাকর্ষ ও অভিকর্ষ"
+  },
+  {
+    "videoId": "bhIErsodIiI",
+    "title": "মহাকর্ষ ও অভিকর্ষ  - পর্ব ০৯",
+    "pdfLink": "20241216-1734295046-BIPsWq32.pdf",
+    "duration": "N/A",
+    "date": "Dec 16, 2024",
+    "category": "মহাকর্ষ ও অভিকর্ষ"
+  },
+  {
+    "videoId": "mgWkKivM7TI",
+    "title": "মহাকর্ষ ও অভিকর্ষ - পর্ব ১০",
+    "pdfLink": "20241219-1734549182-nb4N9cDS.pdf",
+    "duration": "N/A",
+    "date": "Dec 19, 2024",
+    "category": "মহাকর্ষ ও অভিকর্ষ"
+  },
+  {
+    "videoId": "bgs3omO-8Aw",
+    "title": "আদর্শ গ্যাস ও গ্যাসের গতিতত্ত্ব  -  পর্ব ০১",
+    "pdfLink": "20241222-1734808935-0Pl4D4wD.pdf",
+    "duration": "N/A",
+    "date": "Dec 22, 2024",
+    "category": "আদর্শ গ্যাস ও গ্যাসের গতিতত্ত্ব"
+  },
+  {
+    "videoId": "II5ceF38e8I",
+    "title": "আদর্শ গ্যাস ও গ্যাসের গতিতত্ত্ব  -  পর্ব ০২",
+    "pdfLink": "20241224-1734986517-14xcUizr.pdf",
+    "duration": "N/A",
+    "date": "Dec 24, 2024",
+    "category": "আদর্শ গ্যাস ও গ্যাসের গতিতত্ত্ব"
+  },
+  {
+    "videoId": "rXYdp1MKXEg",
+    "title": "আদর্শ গ্যাস ও গ্যাসের গতিতত্ত্ব  - পর্ব ০৩",
+    "pdfLink": "20241226-1735157159-03LaqyWX.pdf",
+    "duration": "N/A",
+    "date": "Dec 26, 2024",
+    "category": "আদর্শ গ্যাস ও গ্যাসের গতিতত্ত্ব"
+  },
+  {
+    "videoId": "a2KYM6I-xcY",
+    "title": "আদর্শ গ্যাস ও গ্যাসের গতitত্ত্ব - পর্ব ০৪",
+    "pdfLink": "20241229-1735417458-jHysnV4C.pdf",
+    "duration": "N/A",
+    "date": "Dec 29, 2024",
+    "category": "আদর্শ গ্যাস ও গ্যাসের গতিতত্ত্ব"
+  },
+  {
+    "videoId": "R_R900QI3IA",
+    "title": "আদর্শ গ্যাস ও গ্যাসের গতিতত্ত্ব - পর্ব ০৫",
+    "pdfLink": "20241231-1735586687-KcbuBT3Q.pdf",
+    "duration": "N/A",
+    "date": "Dec 31, 2024",
+    "category": "আদর্শ গ্যাস ও গ্যাসের গতitত্ত্ব"
+  },
+  {
+    "videoId": "1KbaMU0gUIQ",
+    "title": "আদর্শ গ্যাস ও গ্যাসের গতিতত্ত্ব - পর্ব ০৬",
+    "pdfLink": "20250101-1735750599-96lbdL6n.pdf",
+    "duration": "N/A",
+    "date": "Jan 01, 2025",
+    "category": "আদর্শ গ্যাস ও গ্যাসের গতিতত্ত্ব"
+  },
+  {
+    "videoId": "_2p37pNIFZI",
+    "title": "পর্যায়বৃত্ত গতি - পর্ব ০১",
+    "pdfLink": "20250105-1736019429-rEPSmMcX.pdf",
+    "duration": "N/A",
+    "date": "Jan 05, 2025",
+    "category": "পর্যায়বৃত্ত গতি"
+  },
+  {
+    "videoId": "qmDbwZp0epc",
+    "title": "সৃজনশীল + প্র‍্যাক্টিস ক্লাস",
+    "pdfLink": "20250105-1736019678-vSSuBxaX.pdf",
+    "duration": "N/A",
+    "date": "Jan 05, 2025",
+    "category": "পর্যায়বৃত্ত গতি"
+  },
+  {
+    "videoId": "B1kAtnRPz90",
+    "title": "পর্যায়বৃত্ত গতি - পর্ব ০২",
+    "pdfLink": "20250107-1736189272-WuBF5kkK.pdf",
+    "duration": "N/A",
+    "date": "Jan 07, 2025",
+    "category": "পর্যায়বৃত্ত গতি"
+  },
+  {
+    "videoId": "etzFqBrRnvY",
+    "title": "পর্যায়বৃত্ত গতি  - পর্ব ০৩",
+    "pdfLink": "20250109-1736362739-DarIWH7T.pdf",
+    "duration": "N/A",
+    "date": "Jan 09, 2025",
+    "category": "পর্যায়বৃত্ত গতি"
+  },
+  {
+    "videoId": "2rKrpiK7DZM",
+    "title": "পর্যায়বৃত্ত গতি - পর্ব ০৪",
+    "pdfLink": "20250112-1736619592-irUHpR6t.pdf",
+    "duration": "N/A",
+    "date": "Jan 12, 2025",
+    "category": "পর্যায়বৃত্ত গতি"
+  },
+  {
+    "videoId": "Adq1JNMdHxY",
+    "title": "পর্যায়বৃত্ত গতি - পর্ব ০৫",
+    "pdfLink": "20250114-1736801247-LnFUSIOl.pdf",
+    "duration": "N/A",
+    "date": "Jan 14, 2025",
+    "category": "পর্যায়বৃত্ত গতি"
+  },
+  {
+    "videoId": "J9GhQhkhOg8",
+    "title": "পর্যায়বৃত্ত গতি - পর্ব ০৬",
+    "pdfLink": "20250116-1736967194-JSAZITsf.pdf",
+    "duration": "N/A",
+    "date": "Jan 16, 2025",
+    "category": "পর্যায়বৃত্ত গতি"
+  },
+  {
+    "videoId": "LKvlWuKXK5s",
+    "title": "পর্যায়বৃত্ত গতি - পর্ব ০৭",
+    "pdfLink": "20250119-1737228577-Y4UwCcbM.pdf",
+    "duration": "N/A",
+    "date": "Jan 19, 2025",
+    "category": "পর্যায়বৃত্ত গতি"
+  },
+  {
+    "videoId": "RqgPG5pcwME",
+    "title": "পদার্থের গাঠনিক ধর্ম - পর্ব ০১",
+    "pdfLink": "20250122-1737563666-j4m6lxOH.pdf",
+    "duration": "N/A",
+    "date": "Jan 22, 2025",
+    "category": "পদার্থের গাঠনিক ধর্ম"
+  },
+  {
+    "videoId": "R5WAE6_cB4g",
+    "title": "পদার্থের গাঠনিক ধর্ম - পর্ব ০২",
+    "pdfLink": "20250126-1737830206-l1mpe7UI.pdf",
+    "duration": "N/A",
+    "date": "Jan 26, 2025",
+    "category": "পদার্থের গাঠনিক ধর্ম"
+  },
+  {
+    "videoId": "l2m2SfHqyBc",
+    "title": "পদার্থের গাঠনিক ধর্ম - পর্ব ০৩",
+    "pdfLink": "20250129-1738170474-o37Yd7jw.pdf",
+    "duration": "N/A",
+    "date": "Jan 29, 2025",
+    "category": "পদার্থের গাঠনিক ধর্ম"
+  },
+  {
+    "videoId": "w0POBwb4g-8",
+    "title": "পদার্থের গাঠনিক ধর্ম - পর্ব ৪.১",
+    "pdfLink": "20250202-1738434877-zNt87O4Y.pdf",
+    "duration": "N/A",
+    "date": "Feb 02, 2025",
+    "category": "পদার্থের গাঠনিক ধর্ম"
+  },
+  {
+    "videoId": "SUbSQEmYHFA",
+    "title": "পদার্থের গাঠনিক ধর্ম - পর্ব ৪.২",
+    "pdfLink": "20250204-1738667232-HmGrmVnT.pdf",
+    "duration": "N/A",
+    "date": "Feb 04, 2025",
+    "category": "পদার্থের গাঠনিক ধর্ম"
+  },
+  {
+    "videoId": "2F75bQi54Ck",
+    "title": "পদার্থের গাঠনিক ধর্ম - পর্ব ০৫",
+    "pdfLink": "20250206-1738779597-oOviO2Ez.pdf",
+    "duration": "N/A",
+    "date": "Feb 06, 2025",
+    "category": "পদার্থের গাঠনিক ধর্ম"
+  },
+  {
+    "videoId": "L4ZEQb71zVk",
+    "title": "পদার্থের গাঠনিক ধর্ম - পর্ব ০৬",
+    "pdfLink": "20250209-1739045893-A0YCP3RK.pdf",
+    "duration": "N/A",
+    "date": "Feb 09, 2025",
+    "category": "পদার্থের গাঠনিক ধর্ম"
+  },
+  {
+    "videoId": "NlxDQ4p1J0c",
+    "title": "তরঙ্গ - পর্ব ০১",
+    "pdfLink": "20250218-1739823027-uMardrUs.pdf",
+    "duration": "N/A",
+    "date": "Feb 18, 2025",
+    "category": "তরঙ্গ"
+  },
+  {
+    "videoId": "Z5krAU-dSrM",
+    "title": "তরঙ্গ - পর্ব ০২",
+    "pdfLink": "20250220-1739995663-1aQ8s6Vy.pdf",
+    "duration": "N/A",
+    "date": "Feb 20, 2025",
+    "category": "তরঙ্গ"
+  },
+  {
+    "videoId": "lR9Y_2YsIAU",
+    "title": "তরঙ্গ - পর্ব ০৩",
+    "pdfLink": "20250226-1740514038-hZ7CdkqB.pdf",
+    "duration": "N/A",
+    "date": "Feb 26, 2025",
+    "category": "তরঙ্গ"
+  },
+  {
+    "videoId": "ls23DN-zOIA",
+    "title": "তরঙ্গ - পর্ব ০৪",
+    "pdfLink": "20250304-1741030037-nPOcL9kd.pdf",
+    "duration": "N/A",
+    "date": "Mar 04, 2025",
+    "category": "তরঙ্গ"
+  },
+  {
+    "videoId": "3V84wMOJbCw",
+    "title": "তরঙ্গ - পর্ব ০৫",
+    "pdfLink": "20250311-1741683251-Kd3bWpSV.pdf",
+    "duration": "N/A",
+    "date": "Mar 11, 2025",
+    "category": "তরঙ্গ"
+  },
+  {
+    "videoId": "IdYI7rSqzKc",
+    "title": "তরঙ্গ - পর্ব ০৬",
+    "pdfLink": "20250307-1741285862-AbJZKWRI.pdf",
+    "duration": "N/A",
+    "date": "Mar 07, 2025",
+    "category": "তরঙ্গ"
+  },
+  {
+    "videoId": "es-zRlN86-A",
+    "title": "ভৌত জগৎ ও পরিমাপ - পর্ব ০১",
+    "pdfLink": "",
+    "duration": "N/A",
+    "date": "N/A",
+    "category": "ভৌত জগৎ ও পরিমাপ"
+  },
+  {
+    "videoId": "dVVGWdW7hkY",
+    "title": "ভৌত জগৎ - পর্ব ০২",
+    "pdfLink": "20250312-1741716808-CvFMnwDc.pdf",
+    "duration": "N/A",
+    "date": "Mar 12, 2025",
+    "category": "ভৌত জগৎ ও পরিমাপ"
+  },
+  {
+    "videoId": "jRhpgkIysQw",
+    "title": "ভৌত জগৎ - পর্ব  ০৩",
+    "pdfLink": "20250317-1742221505-PMPT3aGz.pdf",
+    "duration": "N/A",
+    "date": "Mar 17, 2025",
+    "category": "ভৌত জগৎ ও পরিমাপ"
+  },
+  {
+    "videoId": "bnm-i9kPA-s",
+    "title": "গতিবিদ্যা - পর্ব ০১",
+    "pdfLink": "20250320-1742470128-uB0vPorJ.pdf",
+    "duration": "N/A",
+    "date": "Mar 20, 2025",
+    "category": "গতিবিদ্যা"
+  },
+  {
+    "videoId": "bCPvEITx19A",
+    "title": "গতিবিদ্যা - পর্ব ০২",
+    "pdfLink": "20250325-1742839906-jXd3APvc.pdf",
+    "duration": "N/A",
+    "date": "Mar 25, 2025",
+    "category": "গতিবিদ্যা"
+  },
+  {
+    "videoId": "ftKz3Fj4kSY",
+    "title": "গতিবিদ্যা - পর্ব ০৩",
+    "pdfLink": "20250410-1744225519-Ue5zsfT3.pdf",
+    "duration": "N/A",
+    "date": "Apr 10, 2025",
+    "category": "গতিবিদ্যা"
+  },
+  {
+    "videoId": "aaHJ_R2jsFU",
+    "title": "গতিবিদ্যা - পর্ব ০৪",
+    "pdfLink": "20250413-1744489476-GItfEaXm.pdf",
+    "duration": "N/A",
+    "date": "Apr 13, 2025",
+    "category": "গতিবিদ্যা"
+  },
+  {
+    "videoId": "TZcRgjoGcEI",
+    "title": "গতিবিদ্যা - পর্ব ০৫",
+    "pdfLink": "20250415-1744663208-bdfZ6yzt.pdf",
+    "duration": "N/A",
+    "date": "Apr 15, 2025",
+    "category": "গতিবিদ্যা"
+  },
+  {
+    "videoId": "nXnyYHPF-2Q",
+    "title": "গতিবিদ্যা - পর্ব  ০৬",
+    "pdfLink": "20250417-1744892394-3imGmgFC.pdf",
+    "duration": "N/A",
+    "date": "Apr 17, 2025",
+    "category": "গতিবিদ্যা"
+  },
+  {
+    "videoId": "zIAoadVATwU",
+    "title": "গতিবিদ্যা - পর্ব  ০৭",
+    "pdfLink": "20250420-1745093143-l9daYNMW.pdf",
+    "duration": "N/A",
+    "date": "Apr 20, 2025",
+    "category": "গতিবিদ্যা"
+  },
+  {
+    "videoId": "O3p6uxRIK24",
+    "title": "গতিবিদ্যা - পর্ব ০৮",
+    "pdfLink": "20250422-1745272201-Vekf313F.pdf",
+    "duration": "N/A",
+    "date": "Apr 22, 2025",
+    "category": "গতিবিদ্যা"
+  }
+]
+        ];
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          // DOM Elements
+          const currentVideoTitle = document.getElementById('current-video-title');
+          const currentVideoDuration = document.getElementById('current-video-duration');
+          const videoThumbnailContainer = document.getElementById('video-thumbnail-container');
+          const youtubeEmbedContainer = document.getElementById('youtube-embed-container');
+          const youtubeIframe = document.getElementById('youtube-iframe');
+          const videoThumbnail = document.getElementById('video-thumbnail');
+          const downloadPdfBtn = document.getElementById('download-pdf-btn');
+          const openYoutubeBtn = document.getElementById('open-youtube-btn');
+          const classList = document.getElementById('class-list');
+          const filterContainer = document.querySelector('.filter-scroll');
+          const currentYear = document.getElementById('current-year');
+
+          // Current state
+          let currentVideoId = '';
+          let currentFilterCategory = null;
+
+          // Set current year in footer
+          currentYear.textContent = new Date().getFullYear();
+
+          // Initialize app
+          initializeApp();
+
+          function initializeApp() {
+            renderCategoryFilters();
+            renderClassList();
+            loadLastWatchedVideo();
+            setupEventListeners();
+          }
+
+          function renderCategoryFilters() {
+            // Get unique categories from classData
+            const categories = ['All Classes', ...new Set(classData.map(cls => cls.category))];
+
+            // Generate HTML for category filters
+            const filtersHtml = categories.map(category => {
+              const isActive = category === currentFilterCategory || (category === 'All Classes' && currentFilterCategory === null);
+              return `
+                <button class="category-btn ${isActive ? 'active' : ''}" data-category="${category === 'All Classes' ? '' : category}">
+                  ${category}
+                </button>
+              `;
+            }).join('');
+
+            // Insert HTML into filter container
+            filterContainer.innerHTML = filtersHtml;
+
+            // Add event listeners to category buttons
+            document.querySelectorAll('.category-btn').forEach(button => {
+              button.addEventListener('click', function() {
+                const category = this.dataset.category;
+                currentFilterCategory = category || null;
+
+                // Update active state
+                document.querySelectorAll('.category-btn').forEach(btn => {
+                  btn.classList.toggle('active',
+                    (btn.dataset.category === category) ||
+                    (btn.dataset.category === '' && category === '')
+                  );
+                });
+
+                // Re-render class list with filter
+                renderClassList();
+              });
+            });
+          }
+
+          function renderClassList() {
+            // Filter class data based on current filter
+            const filteredClasses = currentFilterCategory
+              ? classData.filter(cls => cls.category === currentFilterCategory)
+              : classData;
+
+            // Generate HTML for class list
+            const classListHtml = filteredClasses.map(cls => {
+              const isSelected = cls.videoId === currentVideoId;
+
+              return `
+                <li class="class-item ${isSelected ? 'selected' : ''}" data-video-id="${cls.videoId}">
+                  ${isSelected ? '<div class="selected-indicator"></div>' : ''}
+                  <div class="class-item-content">
+                    <div class="class-info">
+                      <div class="class-icon">
+                        <i class="fas fa-play-circle"></i>
+                        ${isSelected ? `
+                          <div class="playing-indicator">
+                            <div class="playing-indicator-ping"></div>
+                            <div class="playing-indicator-dot"></div>
+                          </div>
+                        ` : ''}
+                      </div>
+                      <div class="class-details">
+                        <h3 class="class-title">${cls.title}</h3>
+                        <div class="class-meta">
+                          <span class="class-meta-item">
+                            <i class="far fa-clock"></i>
+                            ${cls.duration}
+                          </span>
+                          <span class="class-meta-item">
+                            <i class="far fa-calendar-alt"></i>
+                            ${cls.date}
+                          </span>
+                          ${isSelected ? `
+                            <span class="now-playing">
+                              <i class="fas fa-circle"></i>
+                              Now Playing
+                            </span>
+                          ` : ''}
+                        </div>
+                      </div>
+                    </div>
+                    <a href="https://www.bondipathshala.com.bd/pdf/${cls.pdfLink}" target="_blank" class="class-pdf-link" onclick="event.stopPropagation()">
+                      <i class="fas fa-file-pdf"></i>
+                      PDF
+                    </a>
+                  </div>
+                </li>
+              `;
+            }).join('');
+
+            // Insert HTML into class list
+            classList.innerHTML = classListHtml;
+
+            // Add event listeners to class items
+            document.querySelectorAll('.class-item').forEach(item => {
+              item.addEventListener('click', function() {
+                const videoId = this.dataset.videoId;
+                selectVideo(videoId);
+              });
+            });
+          }
+
+          function loadLastWatchedVideo() {
+            // Try to load the last watched video from localStorage
+            const lastWatchedVideoId = localStorage.getItem('lastWatchedVideoId');
+            if (lastWatchedVideoId) {
+              selectVideo(lastWatchedVideoId);
+            } else if (classData.length > 0) {
+              // Default to first video if no saved video
+              selectVideo(classData[0].videoId);
+            }
+          }
+
+          function selectVideo(videoId) {
+            // Find the class data for this video
+            const classItem = classData.find(cls => cls.videoId === videoId);
+            if (!classItem) return;
+
+            // Update current state
+            currentVideoId = videoId;
+
+            // Update localStorage
+            localStorage.setItem('lastWatchedVideoId', videoId);
+
+            // Update UI
+            currentVideoTitle.textContent = classItem.title;
+            currentVideoDuration.textContent = classItem.duration;
+
+            // Update video thumbnail
+            // Corrected thumbnail URL format
+            videoThumbnail.src = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
+            videoThumbnail.alt = classItem.title;
+
+            // Reset video player - show thumbnail again
+            videoThumbnailContainer.classList.remove('hidden');
+            youtubeEmbedContainer.classList.add('hidden');
+
+            // Update button actions
+            downloadPdfBtn.onclick = function() {
+              window.open(`https://www.bondipathshala.com.bd/pdf/${classItem.pdfLink}`, '_blank');
+            };
+
+            openYoutubeBtn.onclick = function() {
+              // Corrected YouTube video URL format
+              window.open(`https://www.youtube.com/watch?v=${videoId}`, '_blank');
+            };
+
+            // Re-render class list to update selection
+            renderClassList();
+          }
+
+          function loadYoutubeVideo(videoId) {
+            // Set iframe src
+            youtubeIframe.src = `https://www.youtube-nocookie.com/embed/${videoId}?rel=0&modestbranding=1&fs=1&iv_load_policy=3&cc_load_policy=0`;
+
+            // Hide thumbnail and show iframe
+            videoThumbnailContainer.classList.add('hidden');
+            youtubeEmbedContainer.classList.remove('hidden');
+          }
+
+          function setupEventListeners() {
+            // Click on thumbnail to play video
+            videoThumbnailContainer.addEventListener('click', function() {
+              loadYoutubeVideo(currentVideoId);
+            });
+
+            // Handle back button to reset history
+            window.addEventListener('popstate', function() {
+              if (window.location.pathname === '/') {
+                window.history.replaceState(null, '', '/');
+              }
+            });
+
+            // Clean up history stack on page load
+            if (window.history.length > 2) {
+              window.history.replaceState(null, '', window.location.pathname);
+            }
+          }
+        });
+    </script>
+</body>
 </html>
